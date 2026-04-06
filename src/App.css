@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Noto Sans Bengali', system-ui, sans-serif;
+  background: #eef2f7;
+  padding: 28px 20px;
+  color: #102a3c;
+}
+
+/* রিপোর্ট কন্টেইনার */
+.dashboard-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+/* হেডার সেকশন */
+.header-section {
+  background: linear-gradient(98deg, #0a2f44 0%, #154e6b 100%);
+  padding: 1.2rem 2rem;
+  color: white;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title-row h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-row h1 small {
+  font-size: 0.85rem;
+  background: #f4c54220;
+  backdrop-filter: blur(2px);
+  padding: 5px 12px;
+  border-radius: 60px;
+  font-weight: normal;
+}
+
+.stats-badge {
+  background: #f1c40f;
+  color: #1e3a2f;
+  padding: 6px 18px;
+  border-radius: 60px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.sub-header {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  opacity: 0.85;
+  border-left: 3px solid #f4c542;
+  padding-left: 14px;
+}
+
+/* টেবেল স্টাইল - মোবাইল ও ডেস্কটপ ফ্রেন্ডলি */
+.table-responsive {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.performance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  min-width: 1100px;
+}
+
+.performance-table th {
+  background: #f0f6fa;
+  color: #0b3b4f;
+  font-weight: 700;
+  padding: 15px 8px;
+  border-bottom: 2px solid #cbdae9;
+  text-align: center;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.performance-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #e4edf2;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #ffffff;
+  transition: all 0.2s;
+}
+
+.performance-table tr:hover td {
+  background-color: #fef7e0;
+}
+
+/* নামের কলাম বাম দিকে */
+.performance-table td:nth-child(2) {
+  text-align: left;
+  font-weight: 600;
+  color: #1f4e6e;
+}
+
+.serial-cell {
+  font-weight: 700;
+  background-color: #fafcff;
+  color: #2c5282;
+}
+
+/* উন্নতি / অবনতি রঙিন ব্যাজ স্টাইল */
+.progress-up {
+  background: #e0f7e8;
+  color: #1d6f42;
+  font-weight: bold;
+  border-radius: 24px;
+  padding: 4px 8px;
+  display: inline-block;
+  min-width: 55px;
+}
+
+.progress-down {
+  background: #ffe4e0;
+  color: #bc3900;
+  font-weight: bold;
+  border-radius: 24px;
+  padding: 4px 8px;
+  display: inline-block;
+  min-width: 55px;
+}
+
+.target-badge {
+  background: #e9ecf3;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.circle-role {
+  background: #eef2fa;
+  border-radius: 16px;
+  padding: 4px 6px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.monova-tag {
+  font-style: italic;
+  color: #636e7e;
+  font-size: 0.7rem;
+}
+
+.comment-text {
+  font-size: 0.72rem;
+  color: #2c5a74;
+  background: #f4f9fe;
+  border-radius: 20px;
+  padding: 4px 8px;
+  display: inline-block;
+  max-width: 160px;
+  white-space: normal;
+  line-height: 1.3;
+}
+
+.footer-meta {
+  background: #f8fafd;
+  padding: 16px 24px;
+  border-top: 1px solid #dce5ef;
+  font-size: 0.7rem;
+  color: #2c4f6e;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Form Styles */
+.form-section {
+  background: #f8fafd;
+  padding: 20px;
+  border-bottom: 1px solid #dce5ef;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0b3b4f;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+  padding: 8px 12px;
+  border: 1px solid #cbdae9;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  background: white;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0a2f44;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #154e6b;
+}
+
+.btn-success {
+  background: #1d6f42;
+  color: white;
+}
+
+.btn-danger {
+  background: #bc3900;
+  color: white;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.75rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #cbdae9;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.pagination button.active {
+  background: #0a2f44;
+  color: white;
+}
+
+.pagination button:hover:not(.active) {
+  background: #f0f6fa;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 680px) {
+  body {
+    padding: 16px 12px;
+  }
+  .performance-table th, .performance-table td {
+    padding: 8px 5px;
+    font-size: 0.7rem;
+  }
+  .title-row h1 {
+    font-size: 1.3rem;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
